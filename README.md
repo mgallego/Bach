@@ -1,4 +1,5 @@
-#Bach (I got the idea while someone plays Bach on the Subway)
+#Bach 
+###(I got the idea while someone plays Bach on the Subway)
 
 A little script/test/application to download torrent (of series) from one or various sites, and automatize with my new raspberry pi
 
@@ -25,4 +26,5 @@ The transmission-daemon config is in the file settings.py_dist you must rename t
 ##Improvements in progress:
 
 Use inheritance properly in spiders.
+
 Create more spiders
