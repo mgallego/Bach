@@ -1,6 +1,6 @@
 #Bach (I got the idea while someone plays Bach on the Subway)
 
-A little script/test/application to download torrent (of series) from one or various sites.
+A little script/test/application to download torrent (of series) from one or various sites, and automatize with my new raspberry pi
 
 The script read an url and send the magnets to a transmission-daemon, before checking that we have not downloaded.
 
