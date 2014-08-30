@@ -1,0 +1,5 @@
+*.pyc
+bach.db
+settings.py
+series.json
+venv/

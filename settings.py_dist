@@ -1,0 +1,13 @@
+HEADERS = {'User-Agent':'Mozilla/5.0'}
+
+TRASMISSION = {
+    'url': '192.168.1.101',
+    'port': 9091,
+    'user': 'transmission',
+    'password': '1234'
+}
+
+#The spider file must be the key with '_spider.py'. Example {'foo': 'Bar'} the filename musy be foo_spider.py
+SPIDERS = {
+    'eztv': 'EztvSpider'
+}
