@@ -22,6 +22,8 @@ Exists an example in the file series.json_dist
 
 The transmission-daemon config is in the file settings.py_dist you must rename to settings.py
 
+run: `python bach.py`
+
 
 ##Improvements in progress:
 
