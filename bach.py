@@ -1,7 +1,8 @@
-import sys, json, settings
+import sys, json, settings,time,os
 sys.path.append("..")
 
-series_json = open('series.json')
+dir_path = os.path.dirname(os.path.abspath(__file__))
+series_json = open(dir_path +'/series.json')
 series = json.load(series_json)
 
 def my_import(name, class_name):
@@ -15,6 +16,15 @@ for site, urls in series.iteritems():
     class_name = settings.SPIDERS[site]
     module_nane = 'spiders.'+site+'_spider'
     Spider = my_import(module_nane, class_name)
+    count = 0
     for url in urls:
-        spider = Spider(url)
-        spider.load_torrents()
+	try:
+	     count = 0
+             spider = Spider(url)
+             spider.load_torrents()
+	except:
+	     if (count < 5):
+	         time.sleep(5)
+	         spider = Spider(url)
+                 spider.load_torrents()
+		 count = count + 1
