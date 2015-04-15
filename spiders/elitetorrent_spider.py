@@ -13,7 +13,10 @@ class ElitetorrentSpider():
         
     def load_torrents(self):
         for magnet in self.get_episodes_magnets():
-            self.th.add_magnet(magnet.xpath('@href')[0]);
+	    try:
+            	self.th.add_magnet(magnet.xpath('@href')[0]);
+	    except:
+		print "Error with magnet: " + magnet.xpath('@href')[0] 
         self.th.commit()
 
     def get_episodes_detail_url(self):

@@ -19,12 +19,14 @@ for site, urls in series.iteritems():
     count = 0
     for url in urls:
 	try:
-	     count = 0
-             spider = Spider(url)
-             spider.load_torrents()
+		count = 0
+		spider = Spider(url)
+		print "Searching " + url
+		spider.load_torrents()
 	except:
-	     if (count < 5):
-	         time.sleep(5)
-	         spider = Spider(url)
-                 spider.load_torrents()
-		 count = count + 1
+		print "Error " + count
+	     	if (count < 5):
+			time.sleep(5)
+	         	spider = Spider(url)
+                 	spider.load_torrents()
+		 	count = count + 1
