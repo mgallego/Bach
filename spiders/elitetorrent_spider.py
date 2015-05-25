@@ -25,7 +25,7 @@ class ElitetorrentSpider():
         data = page.read()
         page.close()
         doc = lxml.html.document_fromstring(data)
-        return doc.xpath("//*[@id='principal']/div[2]/ul/li/a/@href")
+        return doc.xpath("//*[@id='principal']/div[1]/ul/li/a/@href")
 
     def get_episodes_magnets(self):
         magnets = []
